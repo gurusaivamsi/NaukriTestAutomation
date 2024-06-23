@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace Naukri_Job_Application1
 {
     [TestFixture]
-    public class ProfileUpdate_SkillAddition : BaseClass
+    public class ProfileUpdate_SkillAddition : LoginClass
     {
         //4.Profile Update - Skill Addition
         [Test]
@@ -27,15 +27,16 @@ namespace Naukri_Job_Application1
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             String skilltobeAdded = "ETL";
 
-            driver.FindElement(By.XPath("//input[@id='usernameField']")).SendKeys("gurusaivamsi4@gmail.com");
+            /*driver.FindElement(By.XPath("//input[@id='usernameField']")).SendKeys("gurusaivamsi4@gmail.com");
             Thread.Sleep(4000);
             driver.FindElement(By.XPath("//input[@id='passwordField']")).SendKeys("Vamsi@123");
             Thread.Sleep(4000);
             //Login to Naukri
             driver.FindElement(By.XPath("//button[normalize-space()='Login']")).Click();
-            Thread.Sleep(9000);
+            Thread.Sleep(9000);*/
             //driver.FindElement(By.XPath("/html/body/main/div/div/div[3]/div/div[3]/div[2]/a")).Click();
             //Navigate to Profile Page
+
             driver.FindElement(By.XPath("/html[1]/body[1]/main[1]/div[1]/div[1]/div[3]/div[1]/div[3]/div[2]/a[1]")).Click();
             Thread.Sleep(9000);
 

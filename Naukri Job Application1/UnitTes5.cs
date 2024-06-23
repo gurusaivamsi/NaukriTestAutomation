@@ -23,11 +23,14 @@ namespace Naukri_Job_Application1
     {
         //[SetUp]
         //1.Basic Job Search
-        /*[Test]
+        [Test]
         
            
-            public void jobapplication1()
+            public void jobapplicationTest()
             {
+
+            Console.WriteLine("SampleTest Created for C#");
+            /*
                 //Intialize the IwebDriver
                 //IWebDriver driver = new ChromeDriver();
                 //launch an application
@@ -51,8 +54,9 @@ namespace Naukri_Job_Application1
                 Thread.Sleep(9000);
                 Console.WriteLine(driver.Title);
                 driver.Quit();
+            */
 
-            }*/
+            }
 
 
 

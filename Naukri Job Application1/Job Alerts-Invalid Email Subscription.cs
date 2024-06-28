@@ -30,26 +30,36 @@ namespace Naukri_Job_Application1
             //driver.Manage().Window.Maximize();
 
             //Xpth locators
+            //click on job search here
             driver.FindElement(By.XPath("//span[@class='nI-gNb-sb__placeholder']")).Click();
             //Wait statement
             Thread.Sleep(4000);
+            //enter the job desgination
             driver.FindElement(By.XPath("//input[@placeholder='Enter keyword / designation / companies']")).SendKeys("software tester");
             Thread.Sleep(4000);
             //driver.FindElement(By.XPath("//span[@class='ni-gnb-icn ni-gnb-icn-expand-more']")).SendKeys("software tester");
             //Thread.Sleep(6000);
+            //enter the location
             driver.FindElement(By.XPath("//input[@placeholder='Enter location']")).SendKeys("Bengaluru");
             Thread.Sleep(4000);
+            //click on nthe search button
             driver.FindElement(By.XPath("//button[@class='nI-gNb-sb__icon-wrapper']")).Click();
             Thread.Sleep(9000);
+            //click on send me job like these link
             driver.FindElement(By.LinkText("Send me jobs like these")).Click();
             Thread.Sleep(9000);
+            //enter the alert name
             driver.FindElement(By.XPath("//input[@placeholder='Enter alert name']")).SendKeys("software tester,bengalore");
             Thread.Sleep(4000);
+            //enter the invalid email id
             driver.FindElement(By.XPath("//input[@placeholder='Enter your active Email ID']")).SendKeys("gurusaivamsi47437@gmail.com");
             Thread.Sleep(4000);
+            //click on save button
             driver.FindElement(By.XPath("//button[normalize-space()='Save']")).Click();
             Thread.Sleep(4000);
+            //display the title page
             Console.WriteLine(driver.Title);
+            //close the current window assosiated window
             driver.Quit();
         }
     }

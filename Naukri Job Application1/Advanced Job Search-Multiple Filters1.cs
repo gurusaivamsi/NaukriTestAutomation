@@ -5,21 +5,17 @@ using System.Text;
 using Naukri_Job_Application1.Utility;
 using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Numerics;
 
 namespace Naukri_Job_Application1
 {
     [TestFixture]
-    public class Advanced_Job_Search_Multiple_Filters : BaseClass
+    public class Advanced_Job_Search_Multiple_Filters1 : BaseClass
     {
         //8.Advanced Job Search - Multiple Filters:positive scenarios
         /*[Test]
-        public void jobapplication7()
+        public void jobapplication71()
         {
          //Intialize the IwebDriver
          //IWebDriver driver = new ChromeDriver();

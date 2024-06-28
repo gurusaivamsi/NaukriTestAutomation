@@ -36,7 +36,7 @@ namespace Naukri_Job_Application1
             Thread.Sleep(9000);*/
             //driver.FindElement(By.XPath("/html/body/main/div/div/div[3]/div/div[3]/div[2]/a")).Click();
             //Navigate to Profile Page
-
+            //Click on Complete Profile Button
             driver.FindElement(By.XPath("/html[1]/body[1]/main[1]/div[1]/div[1]/div[3]/div[1]/div[3]/div[2]/a[1]")).Click();
             Thread.Sleep(9000);
 
@@ -50,12 +50,16 @@ namespace Naukri_Job_Application1
             else
             {
                 Console.WriteLine(skilltobeAdded + " Skill not present in the Key Skill List. Hence proceeding to add");
+                //Click on key skills
                 driver.FindElement(By.XPath("//*[@id=\"root\"]/div/div/span/div/div/div/div/div/div[2]/div[1]/div/div/ul/li[4]")).Click();
                 Thread.Sleep(9000);
+                //click on edit option
                 driver.FindElement(By.XPath("//div[@class='widgetHead typ-16Bold']//span[@class='edit icon'][normalize-space()='editOneTheme']")).Click();
                 Thread.Sleep(4000);
+                //Enter and add the skill
                 driver.FindElement(By.XPath("//input[@id='keySkillSugg']")).SendKeys(skilltobeAdded);
                 Thread.Sleep(6000);
+                //click on save button
                 driver.FindElement(By.XPath("//button[@id='saveKeySkills']")).Click();
                 Thread.Sleep(10000);
                 skillFound = driver.PageSource.Contains(skilltobeAdded);
@@ -67,10 +71,11 @@ namespace Naukri_Job_Application1
                 {
                     Console.WriteLine(skilltobeAdded + "is not added in the list. Hence failing the test case");
                 }
-
+                //Display the page title
                 Console.WriteLine(driver.Title);
 
             }
+            //close the current window are assosiated window
             driver.Quit();
         }
     }

@@ -25,10 +25,13 @@ namespace Naukri_Job_Application1
             //Maximize the Window
             //driver.Manage().Window.Maximize();
             //xpath locator
+            //Leave the search field blank and attempt to perform a job search
             driver.FindElement(By.XPath("//span[@class='nI-gNb-sb__placeholder']")).Click();
+            //lick on search button
             driver.FindElement(By.XPath("//button[@class='nI-gNb-sb__icon-wrapper']")).Click();
             Thread.Sleep(4000);
             //Console.WriteLine(driver.Title);
+            //close the current window and assosiated window
             driver.Quit();
 
 

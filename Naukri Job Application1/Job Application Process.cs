@@ -5,10 +5,6 @@ using System.Text;
 using Naukri_Job_Application1.Utility;
 using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Numerics;
 
@@ -22,25 +18,30 @@ namespace Naukri_Job_Application1
         public void JobApplicationProcessMethod()
         {
 
-          //Intialize the IwebDriver
-          //IWebDriver driver = new ChromeDriver();
-          //launch an application
-          //driver.Navigate().GoToUrl("https://www.naukri.com/nlogin/login");
-          //Maximize the Window
-          //driver.Manage().Window.Maximize();
+            //Intialize the IwebDriver
+            //IWebDriver driver = new ChromeDriver();
+            //launch an application
+            //driver.Navigate().GoToUrl("https://www.naukri.com/nlogin/login");
+            //Maximize the Window
+            //driver.Manage().Window.Maximize();
 
-          //Xpth locators
-          driver.FindElement(By.XPath("//input[@id='usernameField']")).SendKeys("gurusaivamsi4@gmail.com");
+            //Xpth locators
+            driver.FindElement(By.XPath("//input[@id='usernameField']")).SendKeys("gurusaivamsi4@gmail.com");
+            Thread.Sleep(4000);
+            driver.FindElement(By.XPath("//input[@id='passwordField']")).SendKeys("Vamsi@123");
+            Thread.Sleep(4000);
+            driver.FindElement(By.XPath("//button[normalize-space()='Login']")).Click();
+            //launch an application
+          driver.Navigate().GoToUrl("https://www.naukri.com/mnjuser/recommendedjobs");
           Thread.Sleep(4000);
-          driver.FindElement(By.XPath("//input[@id='passwordField']")).SendKeys("Vamsi@123");
+          driver.FindElement(By.XPath("///p[@title='Support Engineer (Microsoft Technologies with Unity Cloud)']")).Click();
           Thread.Sleep(4000);
-          driver.FindElement(By.XPath("//button[normalize-space()='Login']")).Click();
+
+          string ChildWindowName = driver.WindowHandles[1];
+          driver.SwitchTo().Window(ChildWindowName);
+          driver.FindElement(By.XPath("//div[@class='styles_jhc__apply-button-container__5Bqnb']//button[@id='company-site-button']")).Click();
           Thread.Sleep(4000);
-          driver.FindElement(By.XPath("//a[normalize-space()='Was Administrator']")).Click();
-          Thread.Sleep(4000);
-          driver.FindElement(By.XPath("//div[@class='styles_jhc__apply-button-container__5Bqnb']//button[@id='apply-button']")).Click();
-          Thread.Sleep(4000);
-          driver.FindElement(By.XPath("//div[@id='userInput__2ms5txi0lInputBox']")).SendKeys("sai");
+          driver.FindElement(By.XPath("//button[normalize-space()='Get in touch']")).Click();
           Thread.Sleep(4000);
           driver.FindElement(By.XPath("//div[@class='sendMsg']")).Click();
           Thread.Sleep(4000);

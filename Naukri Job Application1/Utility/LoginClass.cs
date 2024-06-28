@@ -11,12 +11,18 @@ namespace Naukri_Job_Application1.Utility
     {
         [OneTimeSetUp]
         public void Login()
-        {
+        {    
+            //Naukri_Job_Application1 login
+
+            //Email id/username
             driver.FindElement(By.XPath("//input[@id='usernameField']")).SendKeys("gurusaivamsi4@gmail.com");
+            //Wait Statement
             Thread.Sleep(4000);
+            //Password
             driver.FindElement(By.XPath("//input[@id='passwordField']")).SendKeys("Vamsi@123");
             Thread.Sleep(4000);
-            //Login to Naukri
+            //Login button click
+            //Open to the Login Naukri
             driver.FindElement(By.XPath("//button[normalize-space()='Login']")).Click();
             Thread.Sleep(9000);
         }

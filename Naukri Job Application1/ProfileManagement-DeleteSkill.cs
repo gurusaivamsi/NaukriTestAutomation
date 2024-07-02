@@ -13,7 +13,7 @@ namespace Naukri_Job_Application1
     [TestFixture]
     public class ProfileManagement_DeleteSkill : LoginClass
     {
-        //14.Profile Management - Delete Skill
+        //14.Profile Management - Delete Skill:Negative Scenarios
         [Test]  
         public void ProfileManagementMethod()
         {

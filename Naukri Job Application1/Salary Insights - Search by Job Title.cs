@@ -12,77 +12,92 @@ using Naukri_Job_Application1.Utility;
 namespace Naukri_Job_Application1
 {
     [TestFixture]
-    public class Salary_Insights_Search_by_Job_Title : BaseClass
+    public class Salary_Insights_Search_by_Job_Title : LoginClass
 
     {
         [Test]
+        //7.Salary Insights - Search by Job Title
         public void SalaryInsightMethod()
         {
 
-
             //IWebDriver driver = new ChromeDriver();
 
-            try
+
+            // Navigate to Naukri job application website
+            //driver.Navigate().GoToUrl("https://www.naukri.com/");
+
+            // Maximize the browser window
+            //driver.Manage().Window.Maximize();
+
+            // Assuming we need to log in before accessing salary insights
+            // Log in steps here (if required)
+
+            // Navigate to the salary insights section
+            // Assuming the URL or navigation steps are known
+            //driver.Navigate().GoToUrl("https://www.ambitionbox.com/salaries?campaign=desktop_nav");
+
+            // Wait for the page to load
+
+            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            String areSalaryInsightsDisplayed = "SalaryInsightsDisplayed";
+            driver.FindElement(By.XPath("//span[@class='nI-gNb-sb__placeholder']")).Click();
+            //Wait statement
+            Thread.Sleep(4000);
+            //Enter Desgination
+            driver.FindElement(By.XPath("//input[@placeholder='Enter keyword / designation / companies']")).SendKeys("software tester");
+            Thread.Sleep(4000);
+            driver.FindElement(By.XPath("//input[@placeholder='Enter location']")).SendKeys("Hyderabad");
+            Thread.Sleep(4000);
+            //Click on search method
+            driver.FindElement(By.XPath("//button[@class='nI-gNb-sb__icon-wrapper']")).Click();
+            Thread.Sleep(9000);
+            driver.FindElement(By.XPath("//a[normalize-space()='Software Engineer - Test']")).Click();
+            Thread.Sleep(9000);
+            //driver.FindElement(By.XPath("//section[@class='styles_salary-insights-container__gWIDg']")).Click();
+            //Thread.Sleep(9000);
+            
+
+
+            // Wait for the salary insights results to load
+            //wait.Until(d => d.FindElement(By.CssSelector("div.salaryResultsContainer")));
+
+            // Verify that salary insights are displayed
+            //bool areSalaryInsightsDisplayed = driver.FindElements(By.CssSelector("div.salaryResult")).Count > 0;
+            bool SalaryInsight = driver.PageSource.Contains(areSalaryInsightsDisplayed);
+
+            if (SalaryInsight)
             {
-                // Navigate to Naukri job application website
-                //driver.Navigate().GoToUrl("https://www.naukri.com/");
-
-                // Maximize the browser window
-                //driver.Manage().Window.Maximize();
-
-                // Assuming we need to log in before accessing salary insights
-                // Log in steps here (if required)
-
-                // Navigate to the salary insights section
-                // Assuming the URL or navigation steps are known
-                driver.Navigate().GoToUrl("https://www.ambitionbox.com/salaries?campaign=desktop_nav");
-
-                // Wait for the page to load
-                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-                wait.Until(ExpectedConditions.ElementIsVisible(By.ClassName("ab-typeahead")));
-
-                // Search for salary insights by entering a specific job title
-                IWebElement jobTitleInput = driver.FindElement(By.ClassName("ab-typeahead"));
-                jobTitleInput.SendKeys("Software Tester");
-                jobTitleInput.SendKeys(Keys.Enter);
-
-                // Wait for the results to load
-                wait.Until(ExpectedConditions.ElementIsVisible(By.ClassName("Salaries")));
-
-                // Verify that salary insights are displayed
-                IList<IWebElement> salaryInsights = driver.FindElements(By.CssSelector("button[class='ab_btn search-btn round component-search-btn'] span[class='ctas-btn-medium']"));
-
-                if (salaryInsights.Count > 0)
-                {
-                    Console.WriteLine("Salary insights are displayed successfully.");
-
-                    // Print salary values in console
-                    foreach (var insight in salaryInsights)
-                    {
-                        string jobTitle = insight.FindElement(By.CssSelector(".trend-title")).Text;
-                        string avgSalary = insight.FindElement(By.CssSelector(".average-salary")).Text;
-                        Console.WriteLine($"Job Title: {jobTitle} - Average Salary: {avgSalary}");
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("Salary insights are not displayed.");
-                }
+                Console.WriteLine(areSalaryInsightsDisplayed + "Salary insights displayed successfully.");
             }
-            catch (Exception ex)
+            else
             {
-                Console.WriteLine("An error occurred: " + ex.Message);
+                Console.WriteLine(areSalaryInsightsDisplayed + "Salary insights are not displayed.");
             }
-            finally
-            {
-                // Close the browser
-                driver.Quit();
+
+
+            //driver.FindElement(By.XPath("//input[@id='fixed-typeahead']")).SendKeys("Automation tester");
+            //Thread.Sleep(4000);
+
+            //driver.FindElement(By.XPath("//button[@class='ab_btn search-btn round component-search-btn']")).Click();
+            //Thread.Sleep(9000);
+
+
+            //driver.FindElement(By.XPath("//input[@id='jobProfileSearchbox']")).SendKeys("Software Tester");
+            //driver.FindElement(By.XPath("//span[normalize-space()='Software Engineer']")).Click();
+            //string ChildWindowName = driver.WindowHandles[1];
+            //driver.SwitchTo().Window(ChildWindowName);
+
+            //Click on job listing page
+            //driver.FindElement(By.XPath("//div[@class='styles_jlc__main__VdwtF']//div[1]//div[1]//div[1]//a[1]")).Click();
+            //Thread.Sleep(4000);
+            // Close the browser
+            driver.Quit();
 
 
 
-            }
+
         }
     }
-
 }
+
 

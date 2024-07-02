@@ -12,7 +12,8 @@ namespace Naukri_Job_Application1
 {
     [TestFixture]
     public class Advanced_Job_Search_Multiple_Filters : BaseClass
-    {
+    { 
+        //8.Advanced Job Search - Multiple Filters:Positive Scenarios
         [Test]
         public void AdvancedjobsearchmultipleMethod()
         {
@@ -25,45 +26,41 @@ namespace Naukri_Job_Application1
 
             //https://www.naukri.com/nlogin/login
             //Xpth locators
+            //Click on Search Field Here
             driver.FindElement(By.XPath("//span[@class='nI-gNb-sb__placeholder']")).Click();
             //Wait statement
             Thread.Sleep(4000);
 
-            //IWebElement search = driver.FindElement(By.XPath("//*[@placeholder=\"Enter skills / designations / companies\"]"));
-            //search.SendKeys("Software Tester");
-            //*[@class="dropdownMainContainer"]
-
-
-            //IWebElement submit = driver.FindElement(By.XPath("//*[@class=\"qsbSubmit\"]"));
-            //submit.Click();
-
-            //Thread.Sleep(9000);
+            //Designation Field
             driver.FindElement(By.XPath("//input[@placeholder='Enter keyword / designation / companies']")).SendKeys("software tester");
             Thread.Sleep(4000);
-
-            //driver.FindElement(By.XPath("//span[@class='ni-gnb-icn ni-gnb-icn-expand-more']")).SendKeys("software tester");
-            //Thread.Sleep(6000);
-
-            //driver.FindElement(By.XPath("//input[@placeholder='Enter location']")).SendKeys("Bengaluru");
-            //Thread.Sleep(4000);
+            //Click on Search Button
             driver.FindElement(By.XPath("//button[@class='nI-gNb-sb__icon-wrapper']")).Click();
             Thread.Sleep(9000);
+
+            //Click On Salary Check Box 
             IWebElement salary = driver.FindElement(By.XPath("(//*[@title=\"10-15 Lakhs\"])[1]"));
             salary.Click();
             Thread.Sleep(9000);
+            //Click on Location Check Box
             IWebElement Location = driver.FindElement(By.XPath("//span[@title='Bengaluru']"));
             Location.Click();
             Thread.Sleep(9000);
+            //Click on RoleCategory Check Box
             IWebElement RoleCategory = driver.FindElement(By.XPath("//span[@title='Quality Assurance and Testing']"));
             RoleCategory.Click();
             Thread.Sleep(9000);
+            //Move to Slider
             IWebElement exp = driver.FindElement(By.XPath("//*[@class=\"rc-slider-track\"]"));
             Actions actions = new Actions(driver);
             actions.DragAndDropToOffset(exp, 17, 0).Build().Perform();
-
+            //Click on Company Type Check Box
             IWebElement CompanyType = driver.FindElement(By.XPath("//span[@title='Indian MNC']"));
             CompanyType.Click();
+            //Display The Title Name
+            Console.WriteLine(driver.Title);
             Thread.Sleep(9000);
+            //Close The current Window And Assosiate Window
             driver.Quit();
 
 

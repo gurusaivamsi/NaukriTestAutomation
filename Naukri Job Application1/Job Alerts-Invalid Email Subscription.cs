@@ -17,8 +17,8 @@ namespace Naukri_Job_Application1
     [TestFixture]
     public class JobAlerts_InvalidEmailSubscription : BaseClass 
     {
-        
-        //15.Job Alerts - Invalid Email Subscription
+
+        //15.Job Alerts - Invalid Email Subscription:Negative Scenarios
         [Test]
         public void JobAlertsMethod()
         {
@@ -37,8 +37,7 @@ namespace Naukri_Job_Application1
             //enter the job desgination
             driver.FindElement(By.XPath("//input[@placeholder='Enter keyword / designation / companies']")).SendKeys("software tester");
             Thread.Sleep(4000);
-            //driver.FindElement(By.XPath("//span[@class='ni-gnb-icn ni-gnb-icn-expand-more']")).SendKeys("software tester");
-            //Thread.Sleep(6000);
+        
             //enter the location
             driver.FindElement(By.XPath("//input[@placeholder='Enter location']")).SendKeys("Bengaluru");
             Thread.Sleep(4000);
@@ -58,9 +57,9 @@ namespace Naukri_Job_Application1
             driver.FindElement(By.XPath("//button[normalize-space()='Save']")).Click();
             Thread.Sleep(4000);
             //display the title page
-            Console.WriteLine(driver.Title);
+            //Console.WriteLine(driver.Title);
             //close the current window assosiated window
-            driver.Quit();
+             driver.Quit();
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using Naukri_Job_Application1.Utility;
+﻿using Naukri_Job_Application1.BaseClasses;
 using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium;
 using System;
@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Reflection.Metadata;
 using Microsoft.VisualStudio.TestPlatform.CommunicationUtilities;
 
-namespace Naukri_Job_Application1
+namespace Naukri_Job_Application1.TestClass
 {
     [TestFixture]
     public class ErrorHandling_InvalidSearchResults : BaseClass

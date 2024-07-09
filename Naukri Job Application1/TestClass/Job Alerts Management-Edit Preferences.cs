@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Naukri_Job_Application1.Utility;
+using Naukri_Job_Application1.BaseClasses;
 using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium;
 
 using System.Threading.Tasks;
 using System.Numerics;
 
-namespace Naukri_Job_Application1
+namespace Naukri_Job_Application1.TestClass
 {
     [TestFixture]
     public class Job_Alerts_Management_Edit_Preferences : BaseClass
@@ -44,16 +44,6 @@ namespace Naukri_Job_Application1
                 driver.FindElement(By.XPath("//tbody/tr[4]/td[4]/a[1]")).Click();
                 Thread.Sleep(9000);
 
-                //IAlert a = driver.SwitchTo().Alert();
-                //driver.SwitchTo().Alert().Dismiss();
-                //Console.WriteLine(a.GetType());
-                //a.Dismiss();
-                /*IAlert simpleAlert = driver.SwitchTo().Alert();
-                String alertText = simpleAlert.Text;
-                Console.WriteLine("Alert text is " + alertText);
-                simpleAlert.Accept();
-                Console.WriteLine("confirmation alert completed");*/
-
 
                 //update the location
                 driver.FindElement(By.XPath("//input[@id='Sug_locsugg']")).SendKeys("Hyderabad");
@@ -75,13 +65,13 @@ namespace Naukri_Job_Application1
                 Console.WriteLine($"Verify that changes are successfully applied and reflected in the job alerts. Failed.: {ex.Message}");
                 throw;
             }
-        
-             //Display the title name
-             //Console.WriteLine(driver.Title);
-             //close the current window assosiated window
-             driver.Quit();
+
+            //Display the title name
+            //Console.WriteLine(driver.Title);
+            //close the current window assosiated window
+            driver.Quit();
         }
 
-        
+
     }
 }

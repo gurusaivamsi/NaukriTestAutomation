@@ -1,4 +1,4 @@
-﻿using Naukri_Job_Application1.Utility;
+﻿using Naukri_Job_Application1.BaseClasses;
 using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium;
 using System;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Naukri_Job_Application1
+namespace Naukri_Job_Application1.TestClass
 {
     [TestFixture]
     public class ProfileUpdate_SkillAddition : LoginClass
@@ -25,7 +25,7 @@ namespace Naukri_Job_Application1
             //driver.Manage().Window.Maximize();
             //Xpth locators
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-            String skilltobeAdded = "ETL";
+            string skilltobeAdded = "ETL";
 
             /*driver.FindElement(By.XPath("//input[@id='usernameField']")).SendKeys("gurusaivamsi4@gmail.com");
             Thread.Sleep(4000);

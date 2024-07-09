@@ -1,4 +1,4 @@
-﻿using Naukri_Job_Application1.Utility;
+﻿using Naukri_Job_Application1.BaseClasses;
 using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium;
 using System;
@@ -8,15 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Numerics;
 
-namespace Naukri_Job_Application1
+namespace Naukri_Job_Application1.TestClass
 {
     [TestFixture]
-    public class FormValidation_BlankSearch : BaseClass 
+    public class FormValidation_BlankSearch : BaseClass
     {
 
         //12.Form Validation - Blank Search:Negative Scenario
         [Test]
-        public void  FormValidationMethod()
+        public void FormValidationMethod()
         {
             try
             {
@@ -36,15 +36,15 @@ namespace Naukri_Job_Application1
 
             }
 
-                catch (Exception ex)
-                { 
+            catch (Exception ex)
+            {
 
-                    Console.WriteLine($"The System submission and displays an appropriate validation message. Failed.: {ex.Message}");
-                   throw;
-                }
-              //Console.WriteLine(driver.Title);
-              //close the current window and assosiated window
-               //driver.Quit();
+                Console.WriteLine($"The System submission and displays an appropriate validation message. Failed.: {ex.Message}");
+                throw;
+            }
+            //Console.WriteLine(driver.Title);
+            //close the current window and assosiated window
+            //driver.Quit();
 
 
         }

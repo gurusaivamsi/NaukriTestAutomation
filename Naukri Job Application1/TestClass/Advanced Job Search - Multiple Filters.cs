@@ -1,4 +1,4 @@
-﻿using Naukri_Job_Application1.Utility;
+﻿using Naukri_Job_Application1.BaseClasses;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium;
 using System;
@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 //using OpenQA.Selenium.DevTools.V123.Debugger;
 
-namespace Naukri_Job_Application1
+namespace Naukri_Job_Application1.TestClass
 {
     [TestFixture]
     public class Advanced_Job_Search_Multiple_Filters : BaseClass
-    { 
+    {
         //8.Advanced Job Search - Multiple Filters:Positive Scenarios
         [Test]
         public void AdvancedjobsearchmultipleMethod()
@@ -60,6 +60,8 @@ namespace Naukri_Job_Application1
             //Display The Title Name
             Console.WriteLine(driver.Title);
             Thread.Sleep(9000);
+            IWebElement appliedfilters= driver.FindElement(By.XPath("//*[@id=\"applied-filters\"]//p"));
+            appliedfilters.Click();
             //Close The current Window And Assosiate Window
             driver.Quit();
 
@@ -67,7 +69,7 @@ namespace Naukri_Job_Application1
 
 
 
-            /* ReadOnlyCollection<IWebElement> obj = driver.FindElements(By.XPath("//*[@id=\"applied-filters\"]//p"));
+             /*ReadOnlyCollection<IWebElement> obj = driver.FindElements(By.XPath("//*[@id=\"applied-filters\"]//p"));
              List<string> appliedFiltersviewedonScreen = ConverttoList(obj);
              List<string> appliedFilters = new List<string>()
              { "10-15 Lakhs", "IT Services & Consulting", "17 Yrs" };

@@ -10,13 +10,13 @@ using System.Xml.Linq;
 using static System.Net.Mime.MediaTypeNames;
 using System.Drawing;
 using System.Collections.ObjectModel;
-using Naukri_Job_Application1.Utility;
+using Naukri_Job_Application1.BaseClasses;
 using OpenQA.Selenium.Interactions;
 using SeleniumExtras.WaitHelpers;
 
 
 
-namespace Naukri_Job_Application1
+namespace Naukri_Job_Application1.TestClass
 {
     [TestFixture]
     public class UniTest5 : BaseClass

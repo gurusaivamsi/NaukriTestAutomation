@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Naukri_Job_Application1.Utility;
+using Naukri_Job_Application1.BaseClasses;
 using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium;
 using System;
@@ -12,10 +12,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Numerics;
 
-namespace Naukri_Job_Application1
+namespace Naukri_Job_Application1.TestClass
 {
     [TestFixture]
-    public class JobAlerts_InvalidEmailSubscription : BaseClass 
+    public class JobAlerts_InvalidEmailSubscription : BaseClass
     {
 
         //15.Job Alerts - Invalid Email Subscription:Negative Scenarios
@@ -37,7 +37,7 @@ namespace Naukri_Job_Application1
             //enter the job desgination
             driver.FindElement(By.XPath("//input[@placeholder='Enter keyword / designation / companies']")).SendKeys("software tester");
             Thread.Sleep(4000);
-        
+
             //enter the location
             driver.FindElement(By.XPath("//input[@placeholder='Enter location']")).SendKeys("Bengaluru");
             Thread.Sleep(4000);
@@ -59,7 +59,7 @@ namespace Naukri_Job_Application1
             //display the title page
             //Console.WriteLine(driver.Title);
             //close the current window assosiated window
-             driver.Quit();
+            driver.Quit();
         }
     }
 }

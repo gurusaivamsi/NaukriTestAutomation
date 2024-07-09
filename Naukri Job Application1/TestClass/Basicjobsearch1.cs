@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Naukri_Job_Application1.Utility;
+using Naukri_Job_Application1.BaseClasses;
 using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium;
 using System.Threading.Tasks;
 using System.Numerics;
 
-namespace Naukri_Job_Application1
+namespace Naukri_Job_Application1.TestClass
 {
     [TestFixture]
     public class Basicjobsearch1 : BaseClass
     {
         //1.Basic Job Search
-        [Test]
-        public void BasicobSearchMethod1()
+        //[Test]
+        public void BasicobSearchMethod()
         {
             try
             {

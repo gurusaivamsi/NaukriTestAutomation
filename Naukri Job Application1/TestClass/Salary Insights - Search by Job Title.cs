@@ -7,9 +7,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Naukri_Job_Application1.Utility;
+using Naukri_Job_Application1.BaseClasses;
 
-namespace Naukri_Job_Application1
+namespace Naukri_Job_Application1.TestClass
 {
     [TestFixture]
     public class Salary_Insights_Search_by_Job_Title : LoginClass
@@ -39,7 +39,7 @@ namespace Naukri_Job_Application1
             // Wait for the page to load
 
             var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-            String areSalaryInsightsDisplayed = "SalaryInsightsDisplayed";
+            string areSalaryInsightsDisplayed = "SalaryInsightsDisplayed";
             driver.FindElement(By.XPath("//span[@class='nI-gNb-sb__placeholder']")).Click();
             //Wait statement
             Thread.Sleep(4000);
@@ -55,7 +55,7 @@ namespace Naukri_Job_Application1
             Thread.Sleep(9000);
             //driver.FindElement(By.XPath("//section[@class='styles_salary-insights-container__gWIDg']")).Click();
             //Thread.Sleep(9000);
-            
+
 
 
             // Wait for the salary insights results to load

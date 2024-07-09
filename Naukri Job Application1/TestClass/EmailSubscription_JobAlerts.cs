@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using OpenQA.Selenium;
 using System.Threading.Tasks;
-using Naukri_Job_Application1.Utility;
+using Naukri_Job_Application1.BaseClasses;
 
-namespace Naukri_Job_Application1
+namespace Naukri_Job_Application1.TestClass
 {
     [TestFixture]
-    public class EmailSubscription_JobAlerts : BaseClass 
+    public class EmailSubscription_JobAlerts : BaseClass
     {
         //5.Email Subscription - Job Alerts
         [Test]
@@ -34,8 +34,7 @@ namespace Naukri_Job_Application1
                 //Enter Desgination
                 driver.FindElement(By.XPath("//input[@placeholder='Enter keyword / designation / companies']")).SendKeys("software tester");
                 Thread.Sleep(4000);
-                //driver.FindElement(By.XPath("//span[@class='ni-gnb-icn ni-gnb-icn-expand-more']")).SendKeys("software tester");
-                //Thread.Sleep(6000);
+
                 //Enter the location
                 driver.FindElement(By.XPath("//input[@placeholder='Enter location']")).SendKeys("Bengaluru");
                 Thread.Sleep(4000);
@@ -57,17 +56,17 @@ namespace Naukri_Job_Application1
                 Console.WriteLine("Verify successful subscription and confirmation message..");
 
             }
-              catch (Exception ex)
-              {
+            catch (Exception ex)
+            {
 
                 Console.WriteLine($"Verify successful subscription and confirmation message. Failed.: {ex.Message}");
                 throw;
-              }
-                //display the title Name
-                //Console.WriteLine(driver.Title);
-                Thread.Sleep(6000);
-                //close the current window and assosiated window
-                 driver.Quit();
+            }
+            //display the title Name
+            //Console.WriteLine(driver.Title);
+            Thread.Sleep(6000);
+            //close the current window and assosiated window
+            driver.Quit();
         }
     }
 }

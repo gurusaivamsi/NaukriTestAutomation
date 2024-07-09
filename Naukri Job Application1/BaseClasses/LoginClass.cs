@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Naukri_Job_Application1.Utility
+namespace Naukri_Job_Application1.BaseClasses
 {
     public class LoginClass : BaseClass
     {

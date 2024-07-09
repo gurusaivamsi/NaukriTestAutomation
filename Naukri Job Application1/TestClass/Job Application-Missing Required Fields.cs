@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using OpenQA.Selenium;
 using System.Threading.Tasks;
-using Naukri_Job_Application1.Utility;
+using Naukri_Job_Application1.BaseClasses;
 
-namespace Naukri_Job_Application1
+namespace Naukri_Job_Application1.TestClass
 {
     [TestFixture]
     public class Job_Application_Missing_Required_Fields : LoginClass
@@ -27,7 +27,7 @@ namespace Naukri_Job_Application1
             //driver.FindElement(By.XPath("//a[@title='Apply now']")).Click();
             //Wait statement
             //Thread.Sleep(4000);
-            
+
             driver.FindElement(By.XPath("//input[@placeholder='1 (702) 123-4567']")).SendKeys("98765-43210");
             Thread.Sleep(4000);
 
@@ -43,6 +43,16 @@ namespace Naukri_Job_Application1
             driver.FindElement(By.XPath("//textarea[@placeholder='Message']")).SendKeys("job");
             Thread.Sleep(4000);
 
+
+            IWebElement resumeUpload = driver.FindElement(By.XPath("//input[@title=' Upload resume']"));
+            resumeUpload.SendKeys("C:/Users/ADMIN/Downloads/freshers-resume.pdf");
+            Thread.Sleep(9000);
+
+
+            IWebElement photoUpload = driver.FindElement(By.XPath("//input[@title=' Upload Photo']"));
+            photoUpload.SendKeys("C:\\Users\\ADMIN\\Downloads\\images3.png");
+            Thread.Sleep(9000);
+
             driver.FindElement(By.XPath("//input[@id='exampleCheck1']")).Click();
             Thread.Sleep(4000);
             driver.FindElement(By.XPath("//button[normalize-space()='Submit Application']")).Click();
@@ -50,36 +60,11 @@ namespace Naukri_Job_Application1
 
             /*string ChildWindowName = driver.WindowHandles[2];
             driver.SwitchTo().Window(ChildWindowName);
-            driver.FindElement(By.XPath("//*[@id=\"listContainer\"]/div[2]/div/div[1]/div/div[2]/span/a[1]")).Click();
-            Thread.Sleep(4000);
-
-            //driver.FindElement(By.XPath("//button[@class='nI-gNb-sb__icon-wrapper']")).Click();
-            //Thread.Sleep(4000);
-            driver.FindElement(By.XPath("//*[@id=\"company-site-button\"]")).Click();
-            Thread.Sleep(6000);
-
-            driver.FindElement(By.XPath("//h3[normalize-space()='Technology Educator']")).Click();
-            Thread.Sleep(4000);
-
-            driver.FindElement(By.XPath("//*[@id=\"joblistinghero-34fa81ba89\"]/div[1]/div[4]/div[1]/a")).Click();
-            Thread.Sleep(9000);
-
-            driver.FindElement(By.XPath("//input[@id='frm-last']")).SendKeys("xyz pvt.ltd");
-            Thread.Sleep(4000);
-
-            //update the job title
-            driver.FindElement(By.XPath("//button[@id='next']")).Click();
-            Thread.Sleep(4000);
-            //click on check box
-           // driver.FindElement(By.XPath("//input[@id='privacy-policy-checkbox']")).Click();
-            //Thread.Sleep(4000);
-            //click on update button
-            //driver.FindElement(By.XPath("//button[normalize-space()='Submit']")).Click();
-            //Thread.Sleep(4000);
+            
             //close the current window and assosiated window
             driver.Quit();*/
-           
-        
+
+
 
 
 

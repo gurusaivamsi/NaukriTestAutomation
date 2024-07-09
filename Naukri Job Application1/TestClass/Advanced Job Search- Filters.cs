@@ -1,4 +1,4 @@
-﻿using Naukri_Job_Application1.Utility;
+﻿using Naukri_Job_Application1.BaseClasses;
 using NUnit.Framework.Legacy;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Interactions;
@@ -13,7 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Naukri_Job_Application1
+namespace Naukri_Job_Application1.TestClass
 {
     [TestFixture]
       public class AdvancedJobSearch_Filters : BaseClass

@@ -1,4 +1,4 @@
-﻿using Naukri_Job_Application1.Utility;
+﻿using Naukri_Job_Application1.BaseClasses;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Numerics;
 using System.Threading.Tasks;
 
-namespace Naukri_Job_Application1
+namespace Naukri_Job_Application1.TestClass
 {
     [TestFixture]
     public class Job_Application_Process : LoginClass
@@ -25,7 +25,7 @@ namespace Naukri_Job_Application1
             driver.Navigate().GoToUrl("https://www.naukri.com/mnjuser/recommendedjobs");
             Thread.Sleep(4000);
 
-            
+
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
 
             try
@@ -36,7 +36,8 @@ namespace Naukri_Job_Application1
 
                 driver.FindElement(By.XPath("//button[normalize-space()='Accept']")).Click();
                 Thread.Sleep(4000);
-
+                driver.FindElement(By.XPath("//*[@id=\"root\"]/div[5]/div[1]/div[2]/div[2]/div[2]/div[2]/a"));
+                Thread.Sleep(4000);
                 IWebElement nameField = driver.FindElement(By.XPath("//input[@placeholder='Your Name']"));
                 nameField.SendKeys("John Doe");
                 Thread.Sleep(4000);
@@ -65,7 +66,7 @@ namespace Naukri_Job_Application1
                 driver.FindElement(By.XPath("//textarea[@placeholder='Message']")).SendKeys("job");
                 Thread.Sleep(4000);
 
-               // Fill out the application form with valid details
+                // Fill out the application form with valid details
                 /*IWebElement nameField = driver.FindElement(By.XPath("//input[@placeholder='Your Name']"));
                 nameField.SendKeys("John Doe");
                 Thread.Sleep(4000);
@@ -111,7 +112,7 @@ namespace Naukri_Job_Application1
                 Checkbox.Click();
                 Thread.Sleep(6000);
 
-               // Submit the application form
+                // Submit the application form
                 IWebElement submitApplicationButton = driver.FindElement(By.XPath("//button[normalize-space()='Submit Application']"));
                 submitApplicationButton.Click();
                 Thread.Sleep(15000);
@@ -141,11 +142,11 @@ namespace Naukri_Job_Application1
             finally
             {
                 // Close the browser
-               // driver.Quit();
+                // driver.Quit();
             }
         }
     }
 }
-        
-    
+
+
 

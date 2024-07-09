@@ -32,7 +32,7 @@ namespace Naukri_Job_Application1.TestClass
                 //Wait statement
                 Thread.Sleep(4000);
                 //Enter Desgination
-                driver.FindElement(By.XPath("//input[@placeholder='Enter keyword / designation / companies']")).SendKeys("software tester");
+                driver.FindElement(By.XPath("//input[@placeholder='Enter keyword / designation / companies']")).SendKeys("software test");
                 Thread.Sleep(4000);
 
                 //Enter the location

@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Naukri_Job_Application1.BaseClasses
 {
-    public class BaseClass1
+    public class BaseClass1dummy
     {
 #pragma warning disable NUnit1032 // An IDisposable field/property should be Disposed in a TearDown method
         public WebDriver driver;

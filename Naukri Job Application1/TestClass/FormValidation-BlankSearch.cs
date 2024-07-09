@@ -44,7 +44,7 @@ namespace Naukri_Job_Application1.TestClass
             }
             //Console.WriteLine(driver.Title);
             //close the current window and assosiated window
-            //driver.Quit();
+            driver.Quit();
 
 
         }

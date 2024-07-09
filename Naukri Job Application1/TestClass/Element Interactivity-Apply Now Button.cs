@@ -13,7 +13,7 @@ using System.Xml.Linq;
 namespace Naukri_Job_Application1.TestClass
 {
     [TestFixture]
-    public class Element_Interactivity_Apply_Now_Button : BaseClass
+    public class Element_Interactivity_Apply_Now_Button : LoginClass
     {
         [Test]
         public void ApplyNowButtonMethod()
@@ -35,13 +35,16 @@ namespace Naukri_Job_Application1.TestClass
 
                 // Maximize the browser window
                 //driver.Manage().Window.Maximize();
+                driver.FindElement(By.XPath("//a[@title='Apply now']")).Click();
+                //Wait statement
+                Thread.Sleep(4000);
 
                 // Wait for the "Apply Now" button to become clickable
-                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-                IWebElement applyNowButton = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//*[@id=\"root\"]/div[5]/div[1]/div[2]/div[2]/div[2]/div[2]/a"))); // Update XPath as necessary
-
+                //WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+                //IWebElement applyNowButton = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//*[@id=\"root\"]/div[5]/div[1]/div[2]/div[2]/div[2]/div[2]/a"))); // Update XPath as necessary
                 // Click on the "Apply Now" button
-                applyNowButton.Click();
+                //applyNowButton.Click();
+
                 Console.WriteLine("Element to be clickable with in the Processed the application Passed");
 
                 // Additional steps to proceed with the application

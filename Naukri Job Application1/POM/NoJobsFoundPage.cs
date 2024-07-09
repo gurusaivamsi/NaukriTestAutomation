@@ -11,7 +11,7 @@ using SeleniumExtras.PageObjects;
 
 namespace Naukri_Job_Application1.POM
 {
-    public class NoJobsFoundPage : Class1
+    public class NoJobsFoundPage :BaseClass
     {
         //[FindsBy(How = How.XPath, Using = "//span[@title='1 - 19 of 24036 ']")]
         //private IWebElement Result;

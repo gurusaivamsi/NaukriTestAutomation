@@ -12,7 +12,7 @@ using SeleniumExtras.PageObjects;
 namespace Naukri_Job_Application1.POM
 {
     [TestFixture]
-    public class HomePage3 : Class1
+    public class HomePage3 : BaseClass
     {
         [FindsBy(How = How.XPath, Using = "//span[@class='nI-gNb-sb__placeholder']")]
         private IWebElement SearchJobsHere;

@@ -12,7 +12,7 @@ using System.Numerics;
 namespace Naukri_Job_Application1.TestClass
 {
     [TestFixture]
-    public class Job_Alerts_Management_Edit_Preferences : BaseClass
+    public class Job_Alerts_Management_Edit_Preferences : LoginClass
     {
 
         //9.Job Alerts Management - Edit Preferences:Positive Scenarios
@@ -29,14 +29,14 @@ namespace Naukri_Job_Application1.TestClass
                 //driver.Manage().Window.Maximize();
                 //Xpth locators
                 //ente the email
-                driver.FindElement(By.XPath("//input[@id='usernameField']")).SendKeys("gurusaivamsi4@gmail.com");
+                /*driver.FindElement(By.XPath("//input[@id='usernameField']")).SendKeys("gurusaivamsi4@gmail.com");
                 Thread.Sleep(4000);
                 //enter the password 
                 driver.FindElement(By.XPath("//input[@id='passwordField']")).SendKeys("Vamsi@123");
                 Thread.Sleep(4000);
                 //cick on save button
                 driver.FindElement(By.XPath("//button[normalize-space()='Login']")).Click();
-                Thread.Sleep(9000);
+                Thread.Sleep(9000);*/
                 //navigate to job site
                 driver.Navigate().GoToUrl("https://www.naukri.com/alert/manage");
                 Thread.Sleep(9000);
@@ -69,6 +69,7 @@ namespace Naukri_Job_Application1.TestClass
             //Display the title name
             //Console.WriteLine(driver.Title);
             //close the current window assosiated window
+            Thread.Sleep(4000);
             driver.Quit();
         }
 

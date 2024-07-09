@@ -72,6 +72,7 @@ namespace Naukri_Job_Application1.TestClass
             //Console.WriteLine(driver.Title);
             //}
             //close the current window and assosiated window
+            Thread.Sleep(4000);
             driver.Quit();
         }
     }

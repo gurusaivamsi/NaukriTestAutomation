@@ -59,10 +59,11 @@ namespace Naukri_Job_Application1.TestClass
             Thread.Sleep(4000);
 
             /*string ChildWindowName = driver.WindowHandles[2];
-            driver.SwitchTo().Window(ChildWindowName);
-            
+            driver.SwitchTo().Window(ChildWindowName);*/
+
             //close the current window and assosiated window
-            driver.Quit();*/
+            Thread.Sleep(4000);
+            driver.Quit();
 
 
 

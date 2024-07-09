@@ -25,8 +25,9 @@ namespace Naukri_Job_Application1.BaseClasses
     public class BaseClass
     {
         public static IWebDriver driver;
-
+       
         [SetUp]
+        //[OneTimeSetUp]
         public void InitScript()
 
         {

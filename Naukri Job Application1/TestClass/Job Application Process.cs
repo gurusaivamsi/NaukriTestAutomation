@@ -51,12 +51,7 @@ namespace Naukri_Job_Application1.TestClass
 
                 driver.FindElement(By.XPath("//input[@placeholder='1 (702) 123-4567']")).SendKeys("98765-43210");
                 Thread.Sleep(4000);
-
-
-
-
                 driver.FindElement(By.XPath("//input[@placeholder='City']")).SendKeys("hyderabad");
-
                 Thread.Sleep(4000);
                 driver.FindElement(By.XPath("//input[@placeholder='Applying Job Post']")).SendKeys("naukri");
                 Thread.Sleep(4000);
@@ -66,38 +61,7 @@ namespace Naukri_Job_Application1.TestClass
                 driver.FindElement(By.XPath("//textarea[@placeholder='Message']")).SendKeys("job");
                 Thread.Sleep(4000);
 
-                // Fill out the application form with valid details
-                /*IWebElement nameField = driver.FindElement(By.XPath("//input[@placeholder='Your Name']"));
-                nameField.SendKeys("John Doe");
-                Thread.Sleep(4000);
-
-                IWebElement emailField = driver.FindElement(By.XPath("input[placeholder='Your Email']"));
-                emailField.SendKeys("john.doe@example.com");
-                Thread.Sleep(4000);
-
-                IWebElement StateField = driver.FindElement(By.XPath("//input[@placeholder='State']"));
-                StateField.SendKeys("ap");
-                Thread.Sleep(4000);
-
-                IWebElement phoneField = driver.FindElement(By.XPath("//input[@placeholder='1 (702) 123-4567']"));
-                phoneField.SendKeys("98765-43210");
-                Thread.Sleep(4000);
-
-                IWebElement cityField = driver.FindElement(By.XPath("//input[@placeholder='City']"));
-                cityField.SendKeys("hyderabad");
-                Thread.Sleep(4000);
-
-                IWebElement ApplyingjobPostField = driver.FindElement(By.XPath("//input[@placeholder='Applying Job Post']"));
-                ApplyingjobPostField.SendKeys("naukri");
-                Thread.Sleep(4000);
-
-                IWebElement ExpectedSalaryField = driver.FindElement(By.XPath("//input[@placeholder='Expected Salary Per Month (in INR)']"));
-                ExpectedSalaryField.SendKeys("60,000");
-                Thread.Sleep(4000);
-
-                IWebElement MessageField = driver.FindElement(By.XPath("//textarea[@placeholder='Message']"));
-                MessageField.SendKeys("job");
-                Thread.Sleep(4000);*/
+                
 
                 IWebElement resumeUpload = driver.FindElement(By.XPath("//input[@title=' Upload resume']"));
                 resumeUpload.SendKeys("C:/Users/ADMIN/Downloads/freshers-resume.pdf");
@@ -142,7 +106,7 @@ namespace Naukri_Job_Application1.TestClass
             finally
             {
                 // Close the browser
-                // driver.Quit();
+                 driver.Quit();
             }
         }
     }

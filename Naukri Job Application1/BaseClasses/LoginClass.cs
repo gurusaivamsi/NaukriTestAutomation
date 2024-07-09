@@ -9,7 +9,8 @@ namespace Naukri_Job_Application1.BaseClasses
 {
     public class LoginClass : BaseClass
     {
-        [OneTimeSetUp]
+        //[OneTimeSetUp]
+        [SetUp]
         public void Login()
         {    
             //Naukri_Job_Application1 login

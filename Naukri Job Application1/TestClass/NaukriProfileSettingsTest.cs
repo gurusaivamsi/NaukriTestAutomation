@@ -21,11 +21,7 @@ namespace Naukri_Job_Application1.TestClass
             driver.FindElement(By.XPath("/html[1]/body[1]/main[1]/div[1]/div[1]/div[3]/div[1]/div[3]/div[2]/a[1]")).Click();
             Thread.Sleep(9000);
 
-            // Wait for login to complete and navigate to profile settings page
-            //wait.Until(DefaultWait=>driver.FindElement(By.CssSelector("a[data-ga-track='Header|My Naukri|My Profile']"))).Click();
-
-            // Wait for profile settings page to load completely
-            //wait.Until(DefaultWait=>driver.FindElement(By.CssSelector("div.profileContainer")));
+            
 
             // Verify that the required elements are present
             bool isKeySkillsPresent = driver.FindElements(By.XPath("//*[@id=\"root\"]/div/div/span/div/div/div/div/div/div[2]/div[1]/div/div/ul/li[4]")).Count > 0;

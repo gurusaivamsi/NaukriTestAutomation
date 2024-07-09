@@ -12,7 +12,7 @@ using SeleniumExtras.PageObjects;
 namespace Naukri_Job_Application1.POM
 {
     [TestFixture]
-    public class FilterPage1 : Class1
+    public class FilterPage1 :BaseClass
     {
         [FindsBy(How = How.XPath, Using = "//*[@title=\"10-15 Lakhs\"])[1]")]
         private IWebElement Salary;

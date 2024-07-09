@@ -15,7 +15,7 @@ namespace Naukri_Job_Application1.TestClass
     {
         //1.Basic Job Search
         //[Test]
-        public void BasicobSearchMethod()
+        public void BasicobSearchMethod1()
         {
             try
             {

@@ -11,12 +11,12 @@ using System.Numerics;
 namespace Naukri_Job_Application1.TestClass
 {
     [TestFixture]
-    public class FormValidation_BlankSearch : BaseClass
+    public class FormValidation_BlankSearch1 : BaseClass
     {
 
         //12.Form Validation - Blank Search:Negative Scenario
         [Test]
-        public void FormValidationMethod()
+        public void FormValidationMethod1()
         {
             try
             {

@@ -17,8 +17,8 @@ namespace Naukri_Job_Application1.Test
 
 
 
-        private HomePage2 homepage2;
-        private NoJobsFoundPage nojobsfoundPage;
+        private HomePage homepage;
+        private FilterPage filterPage;
 
 
 
@@ -27,14 +27,15 @@ namespace Naukri_Job_Application1.Test
         {
             //Search for product---Valid Search
 
-            homepage2 = new HomePage2();
-            nojobsfoundPage = new NoJobsFoundPage();
+            homepage = new HomePage();
+            filterPage = new FilterPage();
 
-            homepage2.ErrorHandling();
+            homepage.ErrorHandling();
+            filterPage.ErrorHandling();
 
             //ClassicAssert.That(resultPage.AssetResult(), Is.EqualTo("1 - 19 of 24036 \"Software Tester Jobs In Bengaluru\""));
             //Thread.Sleep(7000);
-            Console.WriteLine(nojobsfoundPage.AssetResult());
+            Console.WriteLine(filterPage.ErrorHandling());
 
         }
 

@@ -38,10 +38,10 @@ namespace Naukri_Job_Application1.TestClass
                 driver.FindElement(By.XPath("//button[normalize-space()='Login']")).Click();
                 Thread.Sleep(9000);*/
                 //navigate to job site
-                driver.Navigate().GoToUrl("https://www.naukri.com/alert/manage");
+                driver.Navigate().GoToUrl("https://www.naukri.com/alert/manage");//Alert Manage
                 Thread.Sleep(9000);
                 //click on modify alert
-                driver.FindElement(By.XPath("//tbody/tr[4]/td[4]/a[1]")).Click();
+                driver.FindElement(By.XPath("//tbody/tr[4]/td[4]/a[1]")).Click();//Click On ModiFy Alert
                 Thread.Sleep(9000);
 
 

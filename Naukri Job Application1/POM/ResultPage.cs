@@ -17,7 +17,7 @@ namespace Naukri_Job_Application1.POM
         //private IWebElement Result;
 
         [FindsBy(How = How.XPath, Using = "//*[@id='listContainer']/div[2]/div/div[1]/div/div[1]/a")]
-        private IWebElement Result;
+        private IWebElement Result2;
         
 
 
@@ -34,7 +34,7 @@ namespace Naukri_Job_Application1.POM
         public string AssetResult()
         {
 
-            return Result.Text;
+            return Result2.Text;
 
 
 

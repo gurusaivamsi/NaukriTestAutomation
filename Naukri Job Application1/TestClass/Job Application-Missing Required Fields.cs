@@ -15,48 +15,52 @@ namespace Naukri_Job_Application1.TestClass
         [Test]
         public void JobApplicationMissing()
         {
-            driver.Navigate().GoToUrl("https://www.naukri.com/mnjuser/recommendedjobs");
+            driver.Navigate().GoToUrl("https://www.naukri.com/mnjuser/recommendedjobs");//Recomnded Job
             Thread.Sleep(4000);
 
-            driver.Navigate().GoToUrl("https://codeachi.com/jobs");
+            driver.Navigate().GoToUrl("https://codeachi.com/jobs");//Application URL
             Thread.Sleep(4000);
 
-            driver.FindElement(By.XPath("//button[normalize-space()='Accept']")).Click();
+            driver.FindElement(By.XPath("//button[normalize-space()='Accept']")).Click();//Click On accept button popup
             Thread.Sleep(4000);
 
             //driver.FindElement(By.XPath("//a[@title='Apply now']")).Click();
             //Wait statement
             //Thread.Sleep(4000);
 
-            driver.FindElement(By.XPath("//input[@placeholder='1 (702) 123-4567']")).SendKeys("98765-43210");
+            driver.FindElement(By.XPath("//input[@placeholder='1 (702) 123-4567']")).SendKeys("98765-43210");//Enter Mobilr Number
             Thread.Sleep(4000);
 
-            driver.FindElement(By.XPath("//input[@placeholder='City']")).SendKeys("hyderabad");
+            driver.FindElement(By.XPath("//input[@placeholder='City']")).SendKeys("hyderabad");//Enter City
             Thread.Sleep(4000);
-            driver.FindElement(By.XPath("//input[@placeholder='State']")).SendKeys("ap");
+            driver.FindElement(By.XPath("//input[@placeholder='State']")).SendKeys("ap");//Enter State
             Thread.Sleep(4000);
-            driver.FindElement(By.XPath("//input[@placeholder='Applying Job Post']")).SendKeys("naukri");
+            driver.FindElement(By.XPath("//input[@placeholder='Applying Job Post']")).SendKeys("naukri");//Applying Job Post
             Thread.Sleep(4000);
-            driver.FindElement(By.XPath("//input[@placeholder='Expected Salary Per Month (in INR)']")).SendKeys("60,000");
-            Thread.Sleep(4000);
-
-            driver.FindElement(By.XPath("//textarea[@placeholder='Message']")).SendKeys("job");
+            driver.FindElement(By.XPath("//input[@placeholder='Expected Salary Per Month (in INR)']")).SendKeys("60,000");//Enter Expected Salary
             Thread.Sleep(4000);
 
+            driver.FindElement(By.XPath("//textarea[@placeholder='Message']")).SendKeys("job");//Message
+            Thread.Sleep(9000);
 
-            IWebElement resumeUpload = driver.FindElement(By.XPath("//input[@title=' Upload resume']"));
+
+            IWebElement resumeUpload = driver.FindElement(By.XPath("//input[@title=' Upload resume']"));//Upload resume
             resumeUpload.SendKeys("C:/Users/ADMIN/Downloads/freshers-resume.pdf");
             Thread.Sleep(9000);
 
 
-            IWebElement photoUpload = driver.FindElement(By.XPath("//input[@title=' Upload Photo']"));
+            IWebElement photoUpload = driver.FindElement(By.XPath("//input[@title=' Upload Photo']"));//Upload Photo
             photoUpload.SendKeys("C:\\Users\\ADMIN\\Downloads\\images3.png");
             Thread.Sleep(9000);
 
-            driver.FindElement(By.XPath("//input[@id='exampleCheck1']")).Click();
-            Thread.Sleep(4000);
-            driver.FindElement(By.XPath("//button[normalize-space()='Submit Application']")).Click();
-            Thread.Sleep(4000);
+            IWebElement Checkbox = driver.FindElement(By.XPath("//input[@type='checkbox']"));//Click On Check Box
+            Checkbox.Click();
+            Thread.Sleep(9000);
+
+            // Submit the application form
+            IWebElement submitApplicationButton = driver.FindElement(By.XPath("//button[normalize-space()='Submit Application']"));//Enter Submit Application Button
+            submitApplicationButton.Click();
+            Thread.Sleep(6000);
 
             /*string ChildWindowName = driver.WindowHandles[2];
             driver.SwitchTo().Window(ChildWindowName);*/

@@ -18,23 +18,23 @@ namespace Naukri_Job_Application1.Test
 
 
         private HomePage homePage;
-        private FilterPage resultPage;
+        private FilterPage filterPage;
 
 
 
         [Test]
-        public void BasicJobSearch2()
+        public void BasicJobSearch()
         {
             //Search for product---Valid Search
 
             homePage = new HomePage();
-            resultPage = new FilterPage();
+            filterPage = new FilterPage();
 
             homePage.BasicJobSearch2();
 
             //ClassicAssert.That(resultPage.AssetResult(), Is.EqualTo("1 - 19 of 24036 \"Software Tester Jobs In Bengaluru\""));
             //Thread.Sleep(7000);
-            Console.WriteLine(resultPage.AssetResult());
+            Console.WriteLine(filterPage.AssetResult());
 
         }
 

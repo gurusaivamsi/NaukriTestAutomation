@@ -12,32 +12,32 @@ using SeleniumExtras.PageObjects;
 namespace Naukri_Job_Application1.POM
 {
     [TestFixture]
-    public class HomePage3 : BaseClass
+    public class CompanySearchPage : BaseClass
     {
         [FindsBy(How = How.XPath, Using = "//span[@class='nI-gNb-sb__placeholder']")]
         private IWebElement SearchJobsHere;
         [FindsBy(How = How.XPath, Using = "//input[@placeholder='Enter keyword / designation / companies']")]
-        private IWebElement EnterKeyword;
+        private IWebElement EnterCompany;
         //[FindsBy(How = How.XPath, Using = "//input[@placeholder='Enter location']")]
         //private IWebElement EnterLocation;
         [FindsBy(How = How.XPath, Using = "//button[@class='nI-gNb-sb__icon-wrapper']")]
         private IWebElement SearchButton;
 
 
-        public HomePage3()
+        public CompanySearchPage()
         {
             //this.driver = driver;
             PageFactory.InitElements(driver, this);
 
         }
 
-        [Test]
+       
         public void CompanySearch()
         {
 
             //Search.Clear();
             SearchJobsHere.Click();
-            EnterKeyword.SendKeys("TCS");
+            EnterCompany.SendKeys("TCS");
             //EnterLocation.SendKeys("Bengaluru");
             SearchButton.Click();
 

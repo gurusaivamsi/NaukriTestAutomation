@@ -45,6 +45,11 @@ namespace Naukri_Job_Application1.TestClass
             //Click on Search Button
             driver.FindElement(By.XPath("//button[@class='nI-gNb-sb__icon-wrapper']")).Click();
             Thread.Sleep(9000);
+
+            //Move to Slider Experience 
+            //IWebElement var = driver.FindElement(By.XPath("//*[@class=\"styles_appliedTxt__UmIjs\"]"));
+            //var.Click();
+            //Thread.Sleep(4000);
             //Click on Salary Check Box
             IWebElement salary = driver.FindElement(By.XPath("(//*[@title=\"10-15 Lakhs\"])[1]"));
             salary.Click();
@@ -60,9 +65,12 @@ namespace Naukri_Job_Application1.TestClass
             //Move to Slider Experience 
             IWebElement var = driver.FindElement(By.XPath("//*[@class=\"styles_appliedTxt__UmIjs\"]"));
             var.Click();
+            Thread.Sleep(4000);
             //Dispaly The Title Name
             Console.WriteLine(driver.Title);
             Thread.Sleep(4000);
+            //IWebElement appliedfilters = driver.FindElement(By.XPath("//*[@id=\"applied-filters\"]//p"));
+            //appliedfilters.Click();
             //Close the Current Window And Assosiated Window
             driver.Quit();
 

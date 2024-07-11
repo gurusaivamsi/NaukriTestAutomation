@@ -12,7 +12,7 @@ using System.Numerics;
 namespace Naukri_Job_Application1.TestClass
 {
     [TestFixture]
-    public class BasicJobSearchdummy : BaseClass
+    public class BasicJobSearchdammy : BaseClass
     {
 
         //[SetUp]

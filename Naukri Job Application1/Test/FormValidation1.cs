@@ -12,33 +12,31 @@ using System.Threading.Tasks;
 namespace Naukri_Job_Application1.Test
 {
     [TestFixture]
-    public class Filters : BaseClass
+    public class ForamValidationSearch : BaseClass
     {
 
 
 
         private HomePage homePage;
-        private FilterPage filterPage;
+       
 
 
 
         [Test]
-        public void AdvancedJobSearchMethod1()
+        public void FormValidation()
         {
             //Search for product---Valid Search
 
             homePage = new HomePage();
-            filterPage = new FilterPage();
+            
 
-            homePage.AdvancedJobSearchMethod1();
-            filterPage.AdvancedJobSearchMethod1();
-            Thread.Sleep(9000);
-
-            //homePage1.AdvancedJobSearchMethod1();
+            homePage.FormValidation();
+            Thread.Sleep(6000);
+            
 
             //ClassicAssert.That(resultPage.AssetResult(), Is.EqualTo("1 - 19 of 24036 \"Software Tester Jobs In Bengaluru\""));
             //Thread.Sleep(7000);
-            Console.WriteLine(filterPage.AssetResult1());
+            Console.WriteLine(driver.Title);
 
         }
 

@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 namespace Naukri_Job_Application1.Test
 {
     [TestFixture]
-    public class Filters : BaseClass
+    public class InvalidEmailSubscription : BaseClass
     {
 
 
@@ -23,22 +23,21 @@ namespace Naukri_Job_Application1.Test
 
 
         [Test]
-        public void AdvancedJobSearchMethod1()
+        public void JobAlertsInvalid()
         {
             //Search for product---Valid Search
 
             homePage = new HomePage();
             filterPage = new FilterPage();
 
-            homePage.AdvancedJobSearchMethod1();
-            filterPage.AdvancedJobSearchMethod1();
-            Thread.Sleep(9000);
-
-            //homePage1.AdvancedJobSearchMethod1();
+            homePage.BasicJobSearch2();
+            filterPage.JobAlertsInvalid();
+            Thread.Sleep(6000);
+            //Console.WriteLine(driver.Title);
 
             //ClassicAssert.That(resultPage.AssetResult(), Is.EqualTo("1 - 19 of 24036 \"Software Tester Jobs In Bengaluru\""));
             //Thread.Sleep(7000);
-            Console.WriteLine(filterPage.AssetResult1());
+            //Console.WriteLine(filterPage.JobAlertsInvalid());
 
         }
 

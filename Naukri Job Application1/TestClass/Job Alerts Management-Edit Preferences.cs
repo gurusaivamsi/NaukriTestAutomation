@@ -46,7 +46,7 @@ namespace Naukri_Job_Application1.TestClass
 
 
                 //update the location
-                driver.FindElement(By.XPath("//input[@id='Sug_locsugg']")).SendKeys("Hyderabad");
+                driver.FindElement(By.XPath("//input[@id='Sug_locsugg']")).SendKeys("Bengaluru");
                 Thread.Sleep(4000);
                 //update the Job Category
                 driver.FindElement(By.XPath("//input[@id='cjaJob']")).SendKeys("IT Software - All Jobs");

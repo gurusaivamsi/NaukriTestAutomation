@@ -51,7 +51,7 @@ namespace Naukri_Job_Application1.TestClass
             driver.FindElement(By.XPath("//input[@placeholder='Enter alert name']")).SendKeys("software tester,bengalore");
             Thread.Sleep(4000);
             //enter the invalid email id
-            driver.FindElement(By.XPath("//input[@placeholder='Enter your active Email ID']")).SendKeys("gurusaivamsi47437@gmail.com");
+            driver.FindElement(By.XPath("//input[@placeholder='Enter your active Email ID']")).SendKeys("gurusaivamsi47436@gmail.com");
             Thread.Sleep(4000);
             //click on save button
             driver.FindElement(By.XPath("//button[normalize-space()='Save']")).Click();

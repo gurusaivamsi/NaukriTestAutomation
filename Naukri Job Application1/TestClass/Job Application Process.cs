@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Numerics;
 using System.Threading.Tasks;
+using OpenQA.Selenium.Interactions;
 
 namespace Naukri_Job_Application1.TestClass
 {
@@ -36,6 +37,7 @@ namespace Naukri_Job_Application1.TestClass
 
                 driver.FindElement(By.XPath("//button[normalize-space()='Accept']")).Click();//Click On Accept Popup
                 Thread.Sleep(4000);
+
                 driver.FindElement(By.XPath("//*[@id=\"root\"]/div[5]/div[1]/div[2]/div[2]/div[2]/div[2]/a"));//Apply Button
                 Thread.Sleep(4000);
                 IWebElement nameField = driver.FindElement(By.XPath("//input[@placeholder='Your Name']"));//Enter Name

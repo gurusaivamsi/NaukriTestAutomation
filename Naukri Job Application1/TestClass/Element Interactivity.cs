@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Naukri_Job_Application1.BaseClasses;
 using System.Xml.Linq;
+using OpenQA.Selenium.Interactions;
 
 namespace Naukri_Job_Application1.TestClass
 {
@@ -32,9 +33,11 @@ namespace Naukri_Job_Application1.TestClass
                 driver.Navigate().GoToUrl("https://codeachi.com/jobs"); // Update with the actual job listing URL
                 driver.FindElement(By.XPath("//button[normalize-space()='Accept']")).Click();
                 Thread.Sleep(4000);
+                Actions actions = new Actions(driver);
+                actions.ScrollByAmount(0, 600).Perform();
                 //Apply Button
-                driver.FindElement(By.XPath("//*[@id=\"root\"]/div[5]/div[1]/div[2]/div[2]/div[2]/div[2]/a"));
-                Thread.Sleep(4000);
+                driver.FindElement(By.XPath("//*[@id=\"root\"]/div[5]/div[1]/div[2]/div[2]/div[2]/div[2]/a")).Click();
+                Thread.Sleep(9000);
                 // Wait for the "Apply Now" button to become clickable
                
 
@@ -42,7 +45,7 @@ namespace Naukri_Job_Application1.TestClass
                 //driver.Manage().Window.Maximize();
                 //driver.FindElement(By.LinkText("Apply now")).Click();
                 //Wait statement
-                //Thread.Sleep(9000);
+                Thread.Sleep(9000);
 
                 // Wait for the "Apply Now" button to become clickable
                  //WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));

@@ -5,6 +5,7 @@ using System.Text;
 using OpenQA.Selenium;
 using System.Threading.Tasks;
 using Naukri_Job_Application1.BaseClasses;
+using OpenQA.Selenium.Interactions;
 
 namespace Naukri_Job_Application1.TestClass
 {
@@ -52,6 +53,9 @@ namespace Naukri_Job_Application1.TestClass
             IWebElement photoUpload = driver.FindElement(By.XPath("//input[@title=' Upload Photo']"));//Upload Photo
             photoUpload.SendKeys("C:\\Users\\ADMIN\\Downloads\\images3.png");
             Thread.Sleep(9000);
+
+            Actions actions = new Actions(driver);
+            actions.ScrollByAmount(0, 300).Perform();
 
             IWebElement Checkbox = driver.FindElement(By.XPath("//input[@type='checkbox']"));//Click On Check Box
             Checkbox.Click();

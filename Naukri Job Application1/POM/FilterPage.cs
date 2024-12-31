@@ -20,19 +20,19 @@ namespace Naukri_Job_Application1.POM
         [FindsBy(How = How.XPath, Using = "//h1[normalize-space()='Software Tester Jobs In Bengaluru']")]//Title of the Software Tester
         private IWebElement Result1;
         [FindsBy(How = How.XPath, Using = "//*[@title=\"10-15 Lakhs\"])[1]")]//Salary Check Box Click
-        private IWebElement Salary;
+        private IWebElement Result13;
 
         [FindsBy(How = How.XPath, Using = "//*[@title=\"IT Services & Consulting\"]")]//Check Box Click
-        private IWebElement Industry;
+        private IWebElement Result14;
 
         [FindsBy(How = How.XPath, Using = "//*[@class=\"rc-slider-track\"]")]//Check Box Click
-        private IWebElement exp;
+        private IWebElement Result15;
 
         [FindsBy(How = How.XPath, Using = "//*[@class=\"styles_appliedTxt__UmIjs\"]")]//Slide
-        private IWebElement var;
+        private IWebElement Result16;
 
         [FindsBy(How = How.XPath, Using = "//div[@class='styles_filter-wrapper-component__4OBpS']")]//all filters
-        private IWebElement allfilters;
+        private IWebElement Result17;
         [FindsBy(How = How.XPath, Using = "//*[@id='listContainer']/div[2]/div/div[1]/div/div[1]/a")]//list of container
         private IWebElement Result2;
         [FindsBy(How = How.XPath, Using = "//div[contains(text(),'No results found')]")]//no result found display
@@ -103,18 +103,19 @@ namespace Naukri_Job_Application1.POM
         }
 
         //2.Advanced Job Search - Filters
-        public void AdvancedJobSearchMethod1()
+       /*public void AdvancedJobSearchMethod1()
         {
-            Salary.Click();
-            Industry.Click();
-            Actions actions = new Actions(driver);
-            actions.DragAndDropToOffset(exp, 17, 0).Build().Perform();
-            var.Click();
-            allfilters.Click();
+            Result13.Click();
+            Result14.Click();
+            //Actions actions = new Actions(driver);
+            //actions.DragAndDropToOffset(exp, 17, 0).Build().Perform();
+            Result15.Click();
+            Result16.Click();
+            Result17.Click();
             //return search;
 
-        }
-        public string AssetResult1()
+        }*/
+        /*public string AssetResult1()
         {
 
             return allfilters.Text;
@@ -123,7 +124,7 @@ namespace Naukri_Job_Application1.POM
 
 
 
-        }
+        }*/
         //6.Company Search and Details Verification
 
         public bool CompanySearchandDetails()

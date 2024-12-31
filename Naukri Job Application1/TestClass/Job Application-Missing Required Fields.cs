@@ -17,7 +17,7 @@ namespace Naukri_Job_Application1.TestClass
         public void JobApplicationMissing()
         {
             driver.Navigate().GoToUrl("https://www.naukri.com/mnjuser/recommendedjobs");//Recomnded Job
-            Thread.Sleep(4000);
+            Thread.Sleep(2000);
 
             driver.Navigate().GoToUrl("https://codeachi.com/jobs");//Application URL
             Thread.Sleep(4000);

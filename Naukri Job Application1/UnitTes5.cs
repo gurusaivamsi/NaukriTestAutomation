@@ -13,6 +13,9 @@ using System.Collections.ObjectModel;
 using Naukri_Job_Application1.BaseClasses;
 using OpenQA.Selenium.Interactions;
 using SeleniumExtras.WaitHelpers;
+using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Safari;
+using BasePageObjectModel;
 
 
 
@@ -458,16 +461,110 @@ namespace Naukri_Job_Application1.TestClass
         }*/
 
 
+        [Test]
+        public void jobapplication123()
+        {
+            //Intialize the IwebDriver
+            IWebDriver driver = new ChromeDriver();
+            //launch an application
+            driver.Navigate().GoToUrl("https://www.kalgudicotre/login");
+            //Maximize the Window
+            driver.Manage().Window.Maximize();
+
+            //Xpth locators
+            driver.FindElement(By.XPath("//span[@class='nI-gNb-sb__placeholder']")).Click();
+            //Wait statement
+            Thread.Sleep(4000);
+            driver.FindElement(By.XPath("//input[@placeholder='Enter keyword / designation / companies']")).SendKeys("hgk");
+            Thread.Sleep(4000);
+            //driver.FindElement(By.XPath("//span[@class='ni-gnb-icn ni-gnb-icn-expand-more']")).SendKeys("software tester");
+            //Thread.Sleep(6000);
+            driver.FindElement(By.XPath("//input[@placeholder='Enter location']")).SendKeys("chittor");
+            Thread.Sleep(4000);
+            driver.FindElement(By.XPath("//button[@class='nI-gNb-sb__icon-wrapper']")).Click();
+            Thread.Sleep(9000);
+            Console.WriteLine(driver.Title);
+            Console.WriteLine(driver.PageSource);
+            Console.WriteLine(driver.CurrentWindowHandle);
+            //WebElement Method
+            //driver.Quit();
+            driver.Close();
+            driver.Quit();
+
+            //Launch the Browser 
+            driver = new ChromeDriver();
+            driver = new FirefoxDriver();
+            driver = new SafariDriver();
+            //Screen Adujustment
+            driver.Manage().Window.Maximize();
+            driver.Manage().Window.Minimize();
+            driver.Navigate().GoToUrl("https://google.com");
+            driver.Quit();
+            driver.Close();
+            //Launch The Application
+            driver.Navigate().GoToUrl("https://google.com");
+            //Navigation Methods
+            driver.Navigate().Forward();
+            driver.Navigate().Back();
+            driver.Navigate().Refresh();
+            //Browser Working
+            IWebDriver driver1 = new ChromeDriver();
+            IWebDriver driver2 = new FirefoxDriver();
+            IWebDriver driver3 = new SafariDriver();
+            //Locators
+            driver.FindElement(By.XPath("")).Click();
+            driver.FindElement(By.XPath("")).SendKeys("");
+            driver.FindElement(By.CssSelector(""));
+            driver.FindElement(By.Id(""));
+            driver.FindElement(By.Name(""));
+            driver.FindElement(By.ClassName(""));
+            driver.FindElement(By.LinkText(""));
+            driver.FindElement(By.PartialLinkText(""));
+            driver.FindElement(By.LinkText(""));
+            driver.FindElements(By.Name(""));
+            driver.FindElements(By.PartialLinkText(""));
+
+            //Scroll Up And Scroll Down
+            Actions actions = new Actions(driver);
+            actions.ScrollByAmount(0, 700).Perform();
+
+            //Wait Methods 
+            //driver.implisit Wait();
+            //driver.Explicit Wait();
+            //driver.Fluent Wait();
+
+            //Particual Line Wait in a Method
+            Thread.Sleep(3000);
+            driver.Quit();
+            driver.Close();
+
+            //Browser Methods
+            driver.Navigate().GoToUrl("https://www.google.com");
+            //driver.Navigate().CurrentUrl("https://google.com");
+
+        }
+            
 
 
-       
+            
+
+
+
     }
 
 
 
 
 
+
+
 }
+
+
+
+
+
+
 
 
 

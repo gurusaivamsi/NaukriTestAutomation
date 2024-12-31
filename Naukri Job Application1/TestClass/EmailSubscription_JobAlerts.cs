@@ -32,7 +32,7 @@ namespace Naukri_Job_Application1.TestClass
                 //Wait statement
                 Thread.Sleep(4000);
                 //Enter Desgination
-                driver.FindElement(By.XPath("//input[@placeholder='Enter keyword / designation / companies']")).SendKeys("software test");
+                driver.FindElement(By.XPath("//input[@placeholder='Enter keyword / designation / companies']")).SendKeys("software tester");
                 Thread.Sleep(4000);
 
                 //Enter the location
@@ -45,7 +45,7 @@ namespace Naukri_Job_Application1.TestClass
                 driver.FindElement(By.LinkText("Send me jobs like these")).Click();
                 Thread.Sleep(9000);
                 //Enter the alert name
-                driver.FindElement(By.XPath("//input[@placeholder='Enter alert name']")).SendKeys("software testing jobs Bengaluru");
+                driver.FindElement(By.XPath("//input[@placeholder='Enter alert name']")).SendKeys("software QA tester jobs Bengaluru");
                 Thread.Sleep(4000);
                 //Enter the active email id
                 driver.FindElement(By.XPath("//input[@placeholder='Enter your active Email ID']")).SendKeys("gurusaivamsi4@gmail.com");

@@ -7,6 +7,7 @@ using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium;
 using System.Threading.Tasks;
 using System.Numerics;
+using OpenQA.Selenium.Interactions;
 
 namespace Naukri_Job_Application1.TestClass
 {
@@ -55,6 +56,8 @@ namespace Naukri_Job_Application1.TestClass
             //delete the skill
             driver.FindElement(By.XPath("//div[@title='ETL']//a[@class='material-icons close'][normalize-space()='Cross']")).Click();
             Thread.Sleep(6000);
+            Actions actions = new Actions(driver);
+            actions.ScrollByAmount(0, 600).Perform();
             //click on save button
             driver.FindElement(By.XPath("//button[@id='saveKeySkills']")).Click();
             Thread.Sleep(6000);

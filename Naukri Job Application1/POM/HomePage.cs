@@ -77,7 +77,7 @@ namespace Naukri_Job_Application1.POM
 
         }
         //2.Advanced Job Search - Filters
-        public void AdvancedJobSearchMethod1()
+        /*public void AdvancedJobSearchMethod1()
         {
 
             //Search.Clear();
@@ -88,7 +88,7 @@ namespace Naukri_Job_Application1.POM
 
             //return search;
 
-        }
+        }*/
         //6.Company Search and Details Verification
         public void CompanySearchandDetails()
         {

@@ -8,6 +8,7 @@ using OpenQA.Selenium;
 using System.Threading.Tasks;
 using System.Numerics;
 
+
 namespace Naukri_Job_Application1.TestClass
 {
     [TestFixture]
@@ -60,12 +61,9 @@ namespace Naukri_Job_Application1.TestClass
             Thread.Sleep(6000);
             driver.Quit();
 
-
-
-
-
-
         }
 
     }
 }
+            
+

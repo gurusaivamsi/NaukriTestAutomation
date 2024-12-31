@@ -1,4 +1,4 @@
-﻿using Naukri_Job_Application1.BaseClasses;
+﻿/*using Naukri_Job_Application1.BaseClasses;
 using NUnit.Framework.Legacy;
 using System;
 using System.Collections.Generic;
@@ -38,9 +38,9 @@ namespace Naukri_Job_Application1.Test
 
             //ClassicAssert.That(resultPage.AssetResult(), Is.EqualTo("1 - 19 of 24036 \"Software Tester Jobs In Bengaluru\""));
             //Thread.Sleep(7000);
-            Console.WriteLine(filterPage.AssetResult1());
+            //Console.WriteLine(filterPage.AdvancedJobSearchMethod2());
 
         }
 
     }
-}
+}*/

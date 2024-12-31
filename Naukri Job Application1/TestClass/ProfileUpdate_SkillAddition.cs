@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OpenQA.Selenium.Interactions;
 
 namespace Naukri_Job_Application1.TestClass
 {
@@ -59,9 +60,13 @@ namespace Naukri_Job_Application1.TestClass
                 //Enter and add the skill
                 driver.FindElement(By.XPath("//input[@id='keySkillSugg']")).SendKeys(skilltobeAdded);
                 Thread.Sleep(6000);
+
+                Actions actions = new Actions(driver);
+                actions.ScrollByAmount(0, 600).Perform();
                 //click on save button
                 driver.FindElement(By.XPath("//button[@id='saveKeySkills']")).Click();
-                Thread.Sleep(10000);
+                Thread.Sleep(6000);
+                
                 skillFound = driver.PageSource.Contains(skilltobeAdded);
                 if (skillFound)
                 {
